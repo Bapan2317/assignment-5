@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment 5</title>
+    <!-- google font poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Daisy UI CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#da373d",
+              bg_primary: "#f1f5f9",
+              bg_btn_primary: "#3752FD",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .poppins-font {
+        font-family: "Poppins", sans-serif;
+      }
+    </style>
+  </head>
+  <body class="bg-slate-100">
+    <section class="poppins-font 2xl:w-[1536px] mx-auto">
+      <!-- header -->
+      <header class="pt-6">
+        <div class="flex justify-between items-center bg-white p-4 rounded-xl">
+          <div class="flex justify-between items-center gap-4">
+            <img src="assets/logo.png" alt="" />
+            <h2 class="text-3xl">Dev<span class="font-bold">Board</span></h2>
+          </div>
+
+          <div class="">
+            <div class="flex justify-between items-center gap-4">
+              <h1 class="text-3xl font-bold">23</h1>
+              <div class="color-theme">
+                <img src="assets/theme-btn.png" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <!-- main -->
+      <main class="mt-6">
+        <div class="flex gap-6 mx-auto">
+          <!-- Left content -->
+          <section id="all-asignment" class="bg-white rounded-xl">
+            <!--  -->
+            <section id="count-assignment" class="flex gap-6 justify-between">
+              <!-- <section class="flex gap-6 justify-between"> -->
+              <div class="bg-white flex gap-6 flex-1 p-6 rounded-xl">
+                <!-- card 1 -->
+                <div
+                  class="flex gap-5 bg-slate-100 items-center p-6 rounded-md"
+                >
+                  <div>
+                    <img
+                      class="bg-white p-3 rounded-full"
+                      src="assets/checkbox.png"
+                      alt=""
+                    />
+                  </div>
+                  <div>
+                    <p class="text-gray-500">Task Assigned</p>
+                    <h2 class="text-3xl font-bold">05</h2>
+                  </div>
+                </div>
+                <!-- card 2 -->
+                <div
+                  class="flex gap-4 items-center bg-green-500 rounded-md text-white text-2xl flex-1 pl-4"
+                >
+                  <img src="assets/board.png" alt="" />
+                  <h2>
+                    Discover Something <br />
+                    New Today!
+                  </h2>
+                </div>
+                <!-- card 3 -->
+                <div
+                  class="flex gap-4 bg-slate-100 items-center p-6 rounded-md"
+                >
+                  <div class="p-3 bg-white rounded-full">
+                    <img class="" src="assets/calender.png" alt="" />
+                  </div>
+                  <div>
+                    <h2 class="text-2xl">
+                      <span>Wed ,</span> <br />
+                      <span class="font-bold">Jul 28 2025</span>
+                    </h2>
+                  </div>
+                </div>
+              </div>
+              <!-- </section> -->
+            </section>
+            <section id="assignment-list">
+              <div class="bg-white grid gap-9 grid-cols-3 p-6">
+                <!-- card 1 -->
+                <div class="p-6 bg-bg_primary rounded-xl w-[342px]">
+                  <div class="space-y-4">
+                    <p class="px-4 py-2 inline-block bg-white rounded-xl">
+                      ShopEase
+                    </p>
+                    <h2 class="text-2xl">Fix Mobile Button Issue</h2>
+                    <p class="bg-white rounded-xl p-4 pb-6 text-gray-500">
+                      Debug using Chrome <br />
+                      DevTools, check for overlapping...
+                    </p>
+                  </div>
+                  <hr class="m-4 border-double" />
+                  <div>
+                    <div class="flex justify-between">
+                      <div>
+                        <p class="color_primary">Deadline</p>
+                        <p>21 March 2025</p>
+                      </div>
+                      <button class="btn bg-bg_btn_primary text-white">
+                        Completed
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <!-- card 2 -->
+                <div class="p-6 bg-bg_primary rounded-xl w-[342px]">
+                  <div class="space-y-4">
+                    <p class="px-4 py-2 inline-block bg-white rounded-xl">
+                      CloudSync
+                    </p>
+                    <h2 class="text-2xl">Add Dark Mode</h2>
+                    <p
+                      class="bg-white rounded-xl p-4 pb-6 text-gray-500 inline-block"
+                    >
+                      Store the user's preference in <br />
+                      localStorage, update CSS variab...
+                    </p>
+                  </div>
+                  <hr class="m-4 border-double" />
+                  <div>
+                    <div class="flex justify-between">
+                      <div>
+                        <p class="color_primary">Deadline</p>
+                        <p>21 March 2025</p>
+                      </div>
+                      <button class="btn bg-bg_btn_primary text-white">
+                        Completed
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <!-- card 3 -->
+                <div class="p-6 bg-bg_primary rounded-xl w-[342px]">
+                  <div class="space-y-4">
+                    <p class="px-4 py-2 inline-block bg-white rounded-xl">
+                      SwiftPay
+                    </p>
+                    <h2 class="text-2xl">Optimize Home page </h2>
+                    <p class="bg-white rounded-xl p-4 pb-6 text-gray-500">
+                      Debug using Chrome <br />
+                      DevTools, check for overlapping...
+                    </p>
+                  </div>
+                  <hr class="m-4 border-double" />
+                  <div>
+                    <div class="flex justify-between">
+                      <div>
+                        <p class="color_primary">Deadline</p>
+                        <p>21 March 2025</p>
+                      </div>
+                      <button class="btn bg-bg_btn_primary text-white">
+                        Completed
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <!-- card 4 -->
+                <div class="p-6 bg-bg_primary rounded-xl w-[342px]">
+                  <div class="space-y-4">
+                    <p class="px-4 py-2 inline-block bg-white rounded-xl">
+                      Meta
+                    </p>
+                    <h2 class="text-2xl">Add new emoji 🤲 </h2>
+                    <p class="bg-white rounded-xl p-4 pb-6 text-gray-500">
+                      Debug using Chrome <br />
+                      DevTools, check for overlapping...
+                    </p>
+                  </div>
+                  <hr class="m-4 border-double" />
+                  <div>
+                    <div class="flex justify-between">
+                      <div>
+                        <p class="color_primary">Deadline</p>
+                        <p>21 March 2025</p>
+                      </div>
+                      <button class="btn bg-bg_btn_primary text-white">
+                        Completed
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <!-- card 5 -->
+                <div class="p-6 bg-bg_primary rounded-xl w-[342px]">
+                  <div class="space-y-4">
+                    <p class="px-4 py-2 inline-block bg-white rounded-xl">
+                      Google LLC
+                    </p>
+                    <h2 class="text-2xl">Integrate OpenAI API</h2>
+                    <p class="bg-white rounded-xl p-4 pb-6 text-gray-500">
+                      Debug using Chrome <br />
+                      DevTools, check for overlapping...
+                    </p>
+                  </div>
+                  <hr class="m-4 border-double" />
+                  <div>
+                    <div class="flex justify-between">
+                      <div>
+                        <p class="color_primary">Deadline</p>
+                        <p>21 March 2025</p>
+                      </div>
+                      <button class="btn bg-bg_btn_primary text-white">
+                        Completed
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <!-- card 6 -->
+                <div class="p-6 bg-bg_primary rounded-xl w-[342px]">
+                  <div class="space-y-4">
+                    <p class="px-4 py-2 inline-block bg-white rounded-xl">
+                      Glassdoar
+                    </p>
+                    <h2 class="text-2xl">Improve Job searching</h2>
+                    <p class="bg-white rounded-xl p-4 pb-6 text-gray-500">
+                      Debug using Chrome <br />
+                      DevTools, check for overlapping...
+                    </p>
+                  </div>
+                  <hr class="m-4 border-double" />
+                  <div>
+                    <div class="flex justify-between">
+                      <div>
+                        <p class="color_primary">Deadline</p>
+                        <p>21 March 2025</p>
+                      </div>
+                      <button class="btn bg-bg_btn_primary text-white">
+                        Completed
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </section>
+          <!-- right content -->
+          <section
+            class="flex bg-white items-center mx-auto flex-col rounded-lg p-6 flex-1"
+          >
+            <div>
+              <div class="flex gap-2 flex-wrap">
+                <img src="assets/activity.png" alt="" />
+                <h2 class="text-xl text-[#00303C]">Activity Log</h2>
+              </div>
+              <button class="btn bg-blue-600 text-white mt-4">
+                Clear History
+              </button>
+            </div>
+            <div class="comment-box"><!--min-h-screen--></div>
+          </section>
+        </div>
+      </main>
+    </section>
+  </body>
+</html>
