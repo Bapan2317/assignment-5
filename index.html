@@ -91,6 +91,7 @@
                 </div>
                 <!-- card 2 -->
                 <div
+                  id="discover"
                   class="flex gap-4 items-center bg-green-500 rounded-md text-white text-2xl flex-1 pl-4"
                 >
                   <img src="assets/board.png" alt="" />
@@ -107,10 +108,7 @@
                     <img class="" src="assets/calender.png" alt="" />
                   </div>
                   <div>
-                    <h2 class="text-2xl">
-                      <span>Wed ,</span> <br />
-                      <span class="font-bold">Jul 28 2025</span>
-                    </h2>
+                    <p id="dateDisplay" class="text-2xl font-bold"></p>
                   </div>
                 </div>
               </div>
@@ -124,7 +122,9 @@
                     <p class="px-4 py-2 inline-block bg-white rounded-xl">
                       ShopEase
                     </p>
-                    <h2 class="text-2xl">Fix Mobile Button Issue</h2>
+                    <h2 class="text-2xl assignment-title">
+                      Fix Mobile Button Issue
+                    </h2>
                     <p class="bg-white rounded-xl p-4 pb-6 text-gray-500">
                       Debug using Chrome <br />
                       DevTools, check for overlapping...
@@ -152,7 +152,7 @@
                     <p class="px-4 py-2 inline-block bg-white rounded-xl">
                       CloudSync
                     </p>
-                    <h2 class="text-2xl">Add Dark Mode</h2>
+                    <h2 class="text-2xl assignment-title">Add Dark Mode</h2>
                     <p
                       class="bg-white rounded-xl p-4 pb-6 text-gray-500 inline-block"
                     >
@@ -167,7 +167,8 @@
                         <p class="color_primary">Deadline</p>
                         <p>21 March 2025</p>
                       </div>
-                      <button id="assignment-two"
+                      <button
+                        id="assignment-two"
                         class="btn click-btn click-alerts bg-bg_btn_primary text-white"
                       >
                         Completed
@@ -194,7 +195,8 @@
                         <p class="color_primary">Deadline</p>
                         <p>21 March 2025</p>
                       </div>
-                      <button id="assignment-three"
+                      <button
+                        id="assignment-three"
                         class="btn click-btn click-alerts bg-bg_btn_primary text-white"
                       >
                         Completed
@@ -221,7 +223,8 @@
                         <p class="color_primary">Deadline</p>
                         <p>21 March 2025</p>
                       </div>
-                      <button id="assignment-four"
+                      <button
+                        id="assignment-four"
                         class="btn click-btn click-alerts bg-bg_btn_primary text-white"
                       >
                         Completed
@@ -248,7 +251,8 @@
                         <p class="color_primary">Deadline</p>
                         <p>21 March 2025</p>
                       </div>
-                      <button id="assignment-five"
+                      <button
+                        id="assignment-five"
                         class="btn click-btn click-alerts bg-bg_btn_primary text-white"
                       >
                         Completed
@@ -260,7 +264,7 @@
                 <div class="p-6 bg-bg_primary rounded-xl w-[342px]">
                   <div class="space-y-4">
                     <p class="px-4 py-2 inline-block bg-white rounded-xl">
-                      Glassdoar
+                      Glassdor
                     </p>
                     <h2 class="text-2xl">Improve Job searching</h2>
                     <p class="bg-white rounded-xl p-4 pb-6 text-gray-500">
@@ -275,7 +279,8 @@
                         <p class="color_primary">Deadline</p>
                         <p>21 March 2025</p>
                       </div>
-                      <button id="assignment-six"
+                      <button
+                        id="assignment-six"
                         class="btn click-btn click-alerts bg-bg_btn_primary text-white"
                       >
                         Completed
@@ -295,12 +300,14 @@
                 <img src="assets/activity.png" alt="" />
                 <h2 class="text-xl text-[#00303C]">Activity Log</h2>
               </div>
-              <button class="btn bg-blue-600 text-white my-4">
+              <button
+                id="clear-history"
+                class="btn bg-blue-600 text-white my-4"
+              >
                 Clear History
               </button>
             </div>
-            <div id="comment-container" class="space-y-4 mt-4">       
-            </div>
+            <div id="comment-container" class="space-y-4 mt-4"></div>
           </section>
         </div>
       </main>
