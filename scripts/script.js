@@ -12,6 +12,9 @@ document.getElementById("discover").addEventListener("click", function () {
   window.location.href = "../discover.html";
 });
 
+// date
+document.getElementById("dateDisplay").innerText = date();
+
 // Click button to alert
 
 const clickAlerts = document.getElementsByClassName("click-alerts");
