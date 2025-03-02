@@ -19,19 +19,44 @@ for (let click of clickAlerts) {
 
 // click to decrease assignment count and increase points
 
-document
-  .getElementById("click-btn")
-  .addEventListener("click", function (event) {
-    event.preventDefault();
-    const countAssignmentIncomplete = getElementByIDtoInnerText(
-      "count-assignment-incomplete"
-    );
-    const decreaseCountAssignment = countAssignmentIncomplete - 1;
-    document.getElementById("count-assignment-incomplete").innerText =
-      decreaseCountAssignment;
+const clickToCount = document.getElementsByClassName('click-btn')
+  for (let click of clickToCount) {
+    
+      click.addEventListener('click', function(event){
+        event.preventDefault()
+        const countAssignmentIncomplete = getElementByIDtoInnerText(
+          "count-assignment-incomplete"
+        );
+        const decreaseCountAssignment = countAssignmentIncomplete - 1;
+        document.getElementById("count-assignment-incomplete").innerText =
+          decreaseCountAssignment;
+    
+        const assignmentPoints = getElementByIDtoInnerText("assignment-points");
+        const increasePoints = parseInt(assignmentPoints) + 1;
+        document.getElementById("assignment-points").innerText = increasePoints;
+        this.disabled = true
+      })
+    
+  }
+  
+// comment box
 
-    const assignmentPoints = getElementByIDtoInnerText("assignment-points");
-    const increasePoints = parseInt(assignmentPoints) + 1;
-    document.getElementById("assignment-points").innerText = increasePoints;
-    document.getElementById("click-btn").disabled = true;
-  });
+document.getElementById('assignment-one').addEventListener('click', function(){
+  getComment('assignment-one');
+})
+document.getElementById('assignment-two').addEventListener('click', function(){
+  getComment("assignment-two")
+})
+document.getElementById('assignment-three').addEventListener('click', function(){
+  getComment("assignment-three")
+})
+document.getElementById('assignment-four').addEventListener('click', function(){
+  getComment("assignment-four")
+})
+document.getElementById('assignment-five').addEventListener('click', function(){
+  getComment("assignment-five")
+})
+document.getElementById('assignment-six').addEventListener('click', function(){
+  getComment("assignment-six")
+})
+
