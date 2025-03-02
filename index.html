@@ -39,7 +39,7 @@
       }
     </style>
   </head>
-  <body class="bg-slate-100">
+  <body id="body" class="bg-slate-100">
     <section class="poppins-font 2xl:w-[1536px] mx-auto">
       <!-- header -->
       <header class="pt-6">
@@ -51,8 +51,8 @@
 
           <div class="">
             <div class="flex justify-between items-center gap-4">
-              <h1 class="text-3xl font-bold">23</h1>
-              <div class="color-theme">
+              <h1 id="assignment-points" class="text-3xl font-bold">23</h1>
+              <div id="color-theme">
                 <img src="assets/theme-btn.png" alt="" />
               </div>
             </div>
@@ -81,7 +81,12 @@
                   </div>
                   <div>
                     <p class="text-gray-500">Task Assigned</p>
-                    <h2 class="text-3xl font-bold">05</h2>
+                    <h2
+                      id="count-assignment-incomplete"
+                      class="text-3xl font-bold"
+                    >
+                      05
+                    </h2>
                   </div>
                 </div>
                 <!-- card 2 -->
@@ -132,7 +137,10 @@
                         <p class="color_primary">Deadline</p>
                         <p>21 March 2025</p>
                       </div>
-                      <button class="btn bg-bg_btn_primary text-white">
+                      <button
+                        id="click-btn"
+                        class="btn click-alerts bg-bg_btn_primary text-white"
+                      >
                         Completed
                       </button>
                     </div>
@@ -159,7 +167,9 @@
                         <p class="color_primary">Deadline</p>
                         <p>21 March 2025</p>
                       </div>
-                      <button class="btn bg-bg_btn_primary text-white">
+                      <button
+                        class="btn click-alerts bg-bg_btn_primary text-white"
+                      >
                         Completed
                       </button>
                     </div>
@@ -184,7 +194,9 @@
                         <p class="color_primary">Deadline</p>
                         <p>21 March 2025</p>
                       </div>
-                      <button class="btn bg-bg_btn_primary text-white">
+                      <button
+                        class="btn click-alerts bg-bg_btn_primary text-white"
+                      >
                         Completed
                       </button>
                     </div>
@@ -209,7 +221,9 @@
                         <p class="color_primary">Deadline</p>
                         <p>21 March 2025</p>
                       </div>
-                      <button class="btn bg-bg_btn_primary text-white">
+                      <button
+                        class="btn click-alerts bg-bg_btn_primary text-white"
+                      >
                         Completed
                       </button>
                     </div>
@@ -234,7 +248,9 @@
                         <p class="color_primary">Deadline</p>
                         <p>21 March 2025</p>
                       </div>
-                      <button class="btn bg-bg_btn_primary text-white">
+                      <button
+                        class="btn click-alerts bg-bg_btn_primary text-white"
+                      >
                         Completed
                       </button>
                     </div>
@@ -259,7 +275,9 @@
                         <p class="color_primary">Deadline</p>
                         <p>21 March 2025</p>
                       </div>
-                      <button class="btn bg-bg_btn_primary text-white">
+                      <button
+                        class="btn click-alerts bg-bg_btn_primary text-white"
+                      >
                         Completed
                       </button>
                     </div>
@@ -286,5 +304,8 @@
         </div>
       </main>
     </section>
+
+    <script src="utulities/utilities.js"></script>
+    <script src="scripts/script.js"></script>
   </body>
 </html>
