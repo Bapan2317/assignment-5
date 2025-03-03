@@ -13,71 +13,30 @@ document.getElementById("discover").addEventListener("click", function () {
 });
 
 // date
+function date() {
+  let currentDate = new Date();
+  let formattedDate = currentDate.toLocaleDateString("en-US", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  });
+  return formattedDate;
+}
 document.getElementById("dateDisplay").innerText = date();
 
-// Click button to alert
+// get time
 
-const clickAlerts = document.getElementsByClassName("click-alerts");
-
-for (let click of clickAlerts) {
-  click.addEventListener("click", function (event) {
-    event.preventDefault();
-    alert("Board updated successfully");
-  });
+function getTime() {
+  const options = {
+    timeZone: "Asia/Kolkata",
+    hour: "2-digit",
+    minute: "2-digit",
+    second: "2-digit",
+    hour12: true,
+  };
+  let currentTime = new Date().toLocaleTimeString("en-US", options);
+  return currentTime;
 }
-
-// click to decrease assignment count and increase points
-
-const clickToCount = document.getElementsByClassName("click-btn");
-for (let click of clickToCount) {
-  click.addEventListener("click", function (event) {
-    event.preventDefault();
-    const countAssignmentIncomplete = getElementByIDtoInnerText(
-      "count-assignment-incomplete"
-    );
-    const decreaseCountAssignment = countAssignmentIncomplete - 1;
-    document.getElementById("count-assignment-incomplete").innerText =
-      decreaseCountAssignment;
-
-    const assignmentPoints = getElementByIDtoInnerText("assignment-points");
-    const increasePoints = parseInt(assignmentPoints) + 1;
-    document.getElementById("assignment-points").innerText = increasePoints;
-    this.disabled = true;
-  });
-}
-
-// comment box
-
-document
-  .getElementById("assignment-one")
-  .addEventListener("click", function () {
-    getComment("assignment-one");
-  });
-document
-  .getElementById("assignment-two")
-  .addEventListener("click", function () {
-    getComment("assignment-two");
-  });
-document
-  .getElementById("assignment-three")
-  .addEventListener("click", function () {
-    getComment("assignment-three");
-  });
-document
-  .getElementById("assignment-four")
-  .addEventListener("click", function () {
-    getComment("assignment-four");
-  });
-document
-  .getElementById("assignment-five")
-  .addEventListener("click", function () {
-    getComment("assignment-five");
-  });
-document
-  .getElementById("assignment-six")
-  .addEventListener("click", function () {
-    getComment("assignment-six");
-  });
 
 // clear history
 
@@ -88,3 +47,23 @@ document
     const commentContainer = document.getElementById("comment-container");
     commentContainer.innerText = "";
   });
+
+// call the all click buttons
+
+getClickResult("assignment-one", "assignment-one-title");
+getComment("assignment-one");
+
+getClickResult("assignment-two");
+getComment("assignment-two");
+
+getClickResult("assignment-three");
+getComment("assignment-three");
+
+getClickResult("assignment-four");
+getComment("assignment-four");
+
+getClickResult("assignment-five");
+getComment("assignment-five");
+
+getClickResult("assignment-six");
+getComment("assignment-six");

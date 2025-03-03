@@ -3,37 +3,34 @@ function getElementByIDtoInnerText(id) {
   return valueCount;
 }
 
-function getComment() {
-  const commentText = "complete the task " + getTime();
-  const commentContainer = document.getElementById("comment-container");
-  const commentElement = document.createElement("p");
-  commentElement.innerText = commentText;
-  commentContainer.appendChild(commentElement);
-}
+function getClickResult(id) {
+  document.getElementById(id).addEventListener("click", function (event) {
+    event.preventDefault();
+    alert("Board updated successfully");
 
-//date
+    const countAssignmentIncomplete = getElementByIDtoInnerText(
+      "count-assignment-incomplete"
+    );
+    const decreaseCountAssignment = countAssignmentIncomplete - 1;
+    document.getElementById("count-assignment-incomplete").innerText =
+      decreaseCountAssignment;
 
-function date() {
-  let currentDate = new Date();
-  let formattedDate = currentDate.toLocaleDateString("en-US", {
-    year: "numeric",
-    month: "long",
-    day: "numeric",
+    const assignmentPoints = getElementByIDtoInnerText("assignment-points");
+    const increasePoints = parseInt(assignmentPoints) + 1;
+    document.getElementById("assignment-points").innerText = increasePoints;
   });
 
-  return formattedDate;
+  document.getElementById(id).addEventListener("click", function () {
+    this.disabled = true;
+  });
 }
 
-// get time
-
-function getTime() {
-  const options = {
-    timeZone: "Asia/Kolkata",
-    hour: "2-digit",
-    minute: "2-digit",
-    second: "2-digit",
-    hour12: true,
-  };
-  let currentTime = new Date().toLocaleTimeString("en-US", options);
-  return currentTime;
+function getComment(id) {
+  document.getElementById(id).addEventListener("click", function (event) {
+    const commentText = getTime();
+    const commentContainer = document.getElementById("comment-container");
+    const commentElement = document.createElement("p");
+    commentElement.innerText = commentText;
+    commentContainer.appendChild(commentElement);
+  });
 }
